@@ -26,6 +26,7 @@
             {% block search %}{% search_form cl %}{% endblock %}
           </div>
           
+          <!-- Exportar colaborador-->
           {% if cl.opts.model_name == 'colaborador' %}
           <div class="export-buttons">
             <form method="get" action="{% url 'colaborador_open:colaborador_colaborador_export_pdf' %}">
@@ -43,6 +44,7 @@
           </div>
           {% endif %}
 
+          <!-- Exportar vpn-->
           {% if cl.opts.model_name == 'vpn' %}
           <div class="export-buttons">
             <form method="get" action="{% url 'colaborador_open:colaborador_vpn_export_pdf' %}">
@@ -50,9 +52,16 @@
                 <i class="fas fa-download pr-2"></i> Exportar VPNs para PDF
               </button>
             </form>
+
+            <form method="get" action="{% url 'colaborador_open:colaborador_vpn_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar VPNs para Excel
+              </button>
+            </form>
           </div>
           {% endif %} 
 
+          <!-- Exportar divisão-->
           {% if cl.opts.model_name == 'divisao' %}
           <div class="export-buttons">
             <form method="get" action="{% url 'colaborador_open:colaborador_divisao_export_pdf' %}">
