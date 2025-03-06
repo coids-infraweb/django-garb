@@ -25,9 +25,15 @@
           <div> 
             {% block search %}{% search_form cl %}{% endblock %}
           </div>
+
+          <div class="export-buttons">
+            <form method="get" action="{% url 'colaborador_open:colaborador_colaborador_export_pdf' %}">
               <button type="submit" class="btn button-primary">
                 <i class="fas fa-download pr-2"></i> Exportar para PDF
-              </button>                                           
+              </button>
+            </form>
+          </div>
+              
           {% block object-tools %}
             <div class="object-tools">
               {% block object-tools-items %}
