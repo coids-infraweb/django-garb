@@ -44,7 +44,16 @@
               </button>
             </form>
           </div>
-          {% endif %}
+          {% endif %} 
+
+          {% if cl.opts.model_name == 'divisao' %}
+          <div class="export-buttons">
+            <form method="get" action="{% url 'colaborador_open:colaborador_divisao_export_pdf' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Divisões para PDF
+              </button>
+            </form>
+          </div>
               
           {% block object-tools %}
             <div class="object-tools">
