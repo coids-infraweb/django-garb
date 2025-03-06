@@ -25,9 +25,7 @@
           <div> 
             {% block search %}{% search_form cl %}{% endblock %}
           </div>
-          <p>Modelo atual: {{ cl.opts.model_name }}</p>
-          <p>Página atual: {{ current_page }}</p>
-          <p>Contexto: {{ cl }}</p>
+          
           {% if cl.opts.model_name == 'colaborador' %}
           <div class="export-buttons">
             <form method="get" action="{% url 'colaborador_open:colaborador_colaborador_export_pdf' %}">
