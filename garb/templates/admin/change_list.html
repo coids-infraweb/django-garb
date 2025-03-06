@@ -26,6 +26,7 @@
             {% block search %}{% search_form cl %}{% endblock %}
           </div>
 
+          {% if current_page == 'colaborador' %}
           <div class="export-buttons">
             <form method="get" action="{% url 'colaborador_open:colaborador_colaborador_export_pdf' %}">
               <button type="submit" class="btn button-primary">
@@ -33,7 +34,9 @@
               </button>
             </form>
           </div>
+          {% endif %}
 
+          {% if current_page == 'vpn' %}
           <div class="export-buttons">
             <form method="get" action="{% url 'colaborador_open:colaborador_vpn_export_pdf' %}">
               <button type="submit" class="btn button-primary">
@@ -41,6 +44,7 @@
               </button>
             </form>
           </div>
+          {% endif %}
               
           {% block object-tools %}
             <div class="object-tools">
