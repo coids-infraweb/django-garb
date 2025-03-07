@@ -68,6 +68,18 @@
             </form>
           </div>
           {% endif %}
+
+          <!-- Exportar grupos de acesso -->
+          {% if cl.opts.model_name == 'grupoAcesso' %}
+          <div class="export-buttons">
+            <form method="get" action="{% url 'grupoAcesso_open:core_grupoAcesso_export_pdf' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Grupos de Acesso para PDF
+              </button>
+            </form>
+          </div>
+          {% endif %}
+
               
           {% block object-tools %}
             <div class="object-tools">
