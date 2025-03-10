@@ -82,7 +82,6 @@
 
           <!-- Exportar servidores -->
           {% if cl.opts.model_name == 'servidor' %}
-          <p>MOdelo Atual: {{ cl.opts.model_name }}</p>
           <div class="export-buttons">
             <form method="get" action="{% url 'infra:infra_servidor_export_pdf' %}">
               <button type="submit" class="btn button-primary">
@@ -94,7 +93,6 @@
 
           <!-- Exportar storages -->
           {% if cl.opts.model_name == 'storage' %}
-          <p>Model Atual: {{ cl.opts.model_name }}</p>
           <div class="export-buttons">
             <form method="get" action="{% url 'infra:infra_storage_export_pdf' %}">
               <button type="submit" class="btn button-primary">
@@ -103,6 +101,19 @@
             </form>
           </div>
           {% endif %}
+
+          <!-- Exportar Supercomputador -->
+          {% if cl.opts.model_name == 'supercomputador' %}
+          <p>Model Atual: {{ cl.opts.model_name }}</p>
+          <div class="export-buttons">
+            <form method="get" action="{% url 'infra:infra_supercomputador_export_pdf' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Supercomputadores para PDF
+              </button>
+            </form>
+          </div>
+          {% endif %}
+
               
           {% block object-tools %}
             <div class="object-tools">
