@@ -114,7 +114,8 @@
           {% endif %}
 
           <!-- Exportar Partes de equipamento -->
-          {% if cl.opts.model_name == 'equipamentoparte' %}
+          <p>Model Atual: {{ cl.opts.model_name }}</p>
+          {% comment %} {% if cl.opts.model_name == 'equipamentoparte' %}
           <p>Model Atual: {{ cl.opts.model_name }}</p>
           <div class="export-buttons">
             <form method="get" action="{% url 'infra:infra_equipamento_parte_export_pdf' %}">
@@ -123,7 +124,7 @@
               </button>
             </form>
           </div>
-          {% endif %}
+          {% endif %} {% endcomment %}
 
               
           {% block object-tools %}
