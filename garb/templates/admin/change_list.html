@@ -104,11 +104,22 @@
 
           <!-- Exportar Supercomputador -->
           {% if cl.opts.model_name == 'supercomputador' %}
-          <p>Model Atual: {{ cl.opts.model_name }}</p>
           <div class="export-buttons">
             <form method="get" action="{% url 'infra:infra_supercomputador_export_pdf' %}">
               <button type="submit" class="btn button-primary">
                 <i class="fas fa-download pr-2"></i> Exportar Supercomputadores para PDF
+              </button>
+            </form>
+          </div>
+          {% endif %}
+
+          <!-- Exportar Partes de equipamento -->
+          {% if cl.opts.model_name == 'equipamentoparte' %}
+          <p>Model Atual: {{ cl.opts.model_name }}</p>
+          <div class="export-buttons">
+            <form method="get" action="{% url 'infra:infra_equipamento_parte_export_pdf' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Partes de Equipamento para PDF
               </button>
             </form>
           </div>
