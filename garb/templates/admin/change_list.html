@@ -93,7 +93,7 @@
           {% endif %} 
 
           <!-- Exportar storages -->
-          {% if cl.opts.model_name == 'storages' %}
+          {% if cl.opts.model_name == 'storage' %}
           <p>Model Atual: {{ cl.opts.model_name }}</p>
           <div class="export-buttons">
             <form method="get" action="{% url 'infra:infra_storage_export_pdf' %}">
