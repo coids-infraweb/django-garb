@@ -81,16 +81,18 @@
           {% endif %}
 
           <!-- Exportar servidores -->
-          <p>Modelo Atual:{{ cl.opts.model_name }}</p>
-          {% comment %} {% if cl.opts.model_name == 'servidor' %}
+          {% if cl.opts.model_name == 'servidor' %}
           <div class="export-buttons">
-            <form method="get" action="{% url 'infra_open:infra_servidor_export_pdf' %}">
+            {% comment %} <form method="get" action="{% url 'infra_open:infra_servidor_export_pdf' %}">
               <button type="submit" class="btn button-primary">
                 <i class="fas fa-download pr-2"></i>Exportar Servidores para PDF
               </button>
-            </form>
+            </form> {% endcomment %}
+            <button type="submit" class="btn button-primary">
+              <i class="fas fa-download pr-2"></i>Exportar Servidores para PDF
+            </button>
           </div>
-          {% endif %} {% endcomment %}
+          {% endif %}
               
           {% block object-tools %}
             <div class="object-tools">
