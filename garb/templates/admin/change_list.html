@@ -158,6 +158,19 @@
           </div>
           {% endif %}
 
+          <!-- Exportar Hostnames e IPs -->
+          {% if cl.opts.model_name == 'hostnameip' %}
+          <div class="export-buttons">
+            <form method="get" action="{% url 'infra:infra_hostnameip_export_pdf' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Hostnames e IPs para PDF
+              </button>
+            </form>
+          </div>
+          {% endif %}
+
+
+
               
           {% block object-tools %}
             <div class="object-tools">
