@@ -81,8 +81,7 @@
           {% endif %}
 
           <!-- Exportar servidores -->
-          {% if cl.opts.model_name == 'servidor' %}
-          <p>Modelo atual: {{ cl.opts.model_name }}</p> 
+          {% if cl.opts.model_name == 'servidor' %} 
           <div class="export-buttons">
             <form method="get" action="{% url 'infra:infra_servidor_export_pdf' %}">
               <button type="submit" class="btn button-primary">
