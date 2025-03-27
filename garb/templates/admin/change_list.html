@@ -66,6 +66,11 @@
                 <i class="fas fa-download pr-2"></i> Exportar Divisões para PDF
               </button>
             </form>
+            <form method="get" action="{% url 'colaborador_open:colaborador_divisao_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Divisões para Excel
+              </button>
+            </form>
           </div>
           {% endif %}
 
