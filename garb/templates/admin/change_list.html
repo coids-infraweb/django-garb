@@ -98,6 +98,11 @@
                 <i class="fas fa-download pr-2"></i> Exportar Servidores para PDF
               </button>
             </form>
+            <form method="get" action="{% url 'infra:infra_servidor_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Servidores para Excel
+              </button>
+            </form>
           </div>
           {% endif %} 
 
@@ -107,6 +112,11 @@
             <form method="get" action="{% url 'infra:infra_storage_export_pdf' %}">
               <button type="submit" class="btn button-primary">
                 <i class="fas fa-download pr-2"></i> Exportar Storages para PDF
+              </button>
+            </form>
+            <form method="get" action="{% url 'infra:infra_storage_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Storages para Excel
               </button>
             </form>
           </div>
@@ -120,6 +130,11 @@
                 <i class="fas fa-download pr-2"></i> Exportar Supercomputadores para PDF
               </button>
             </form>
+            <form method="get" action="{% url 'infra:infra_supercomputador_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Supercomputadores para Excel
+              </button>
+            </form>
           </div>
           {% endif %}
 
@@ -129,6 +144,11 @@
             <form method="get" action="{% url 'infra:infra_equipamentoparte_export_pdf' %}">
               <button type="submit" class="btn button-primary">
                 <i class="fas fa-download pr-2"></i> Exportar Partes de Equipamento para PDF
+              </button>
+            </form>
+            <form method="get" action="{% url 'infra:infra_equipamentoparte_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Partes de Equipamento para Excel
               </button>
             </form>
           </div>
@@ -142,6 +162,11 @@
                 <i class="fas fa-download pr-2"></i> Exportar Ambientes Virtuais para PDF
               </button>
             </form>
+            <form method="get" action="{% url 'infra:infra_ambientevirtual_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Ambientes Virtuais para Excel
+              </button>
+            </form>
           </div>
           {% endif %}
 
@@ -151,6 +176,11 @@
             <form method="get" action="{% url 'infra:infra_templates_export_pdf' %}">
               <button type="submit" class="btn button-primary">
                 <i class="fas fa-download pr-2"></i> Exportar Templates para PDF
+              </button>
+            </form>
+            <form method="get" action="{% url 'infra:infra_templates_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Templates para Excel
               </button>
             </form>
           </div>
