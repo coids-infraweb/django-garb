@@ -82,6 +82,11 @@
                 <i class="fas fa-download pr-2"></i> Exportar Grupos de Acesso para PDF
               </button>
             </form>
+            <form method="get" action="{% url 'core_open:core_grupoAcesso_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Grupos de Acesso para Excel
+              </button>
+            </form>
           </div>
           {% endif %}
 
