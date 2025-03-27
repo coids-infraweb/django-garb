@@ -194,6 +194,11 @@
                 <i class="fas fa-download pr-2"></i> Exportar Racks para PDF
               </button>
             </form>
+            <form method="get" action="{% url 'infra:infra_rack_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Racks para Excel
+              </button>
+            </form>
           </div>
           {% endif %}
 
@@ -220,6 +225,11 @@
             <form method="get" action="{% url 'infra:infra_rede_export_pdf' %}">
               <button type="submit" class="btn button-primary">
                 <i class="fas fa-download pr-2"></i> Exportar Redes para PDF
+              </button>
+            </form>
+            <form method="get" action="{% url 'infra:infra_rede_export_excel' %}">
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Redes para Excel
               </button>
             </form>
           </div>
