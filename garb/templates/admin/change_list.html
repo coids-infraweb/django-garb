@@ -90,7 +90,7 @@
           </div>
           {% endif %}
 
-          <!-- Exportar servidores -->
+          {% comment %} <!-- Exportar servidores -->
           {% if cl.opts.model_name == 'servidor' %} 
           <div class="export-buttons">
             <form method="get" action="{% url 'infra:infra_servidor_export_pdf' %}">
@@ -104,7 +104,30 @@
               </button>
             </form>
           </div>
-          {% endif %} 
+          {% endif %}  {% endcomment %}
+
+          <!-- Exportar servidores -->
+          {% if cl.opts.model_name == 'servidor' %} 
+          <div class="export-buttons">
+            <form method="get" action="{% url 'infra:infra_servidor_export_pdf' %}">
+              {% for key, value in request.GET.items %}
+                <input type="hidden" name="{{ key }}" value="{{ value }}">
+              {% endfor %}
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Servidores para PDF
+              </button>
+            </form>
+
+            <form method="get" action="{% url 'infra:infra_servidor_export_excel' %}">
+              {% for key, value in request.GET.items %}
+                <input type="hidden" name="{{ key }}" value="{{ value }}">
+              {% endfor %}
+              <button type="submit" class="btn button-primary">
+                <i class="fas fa-download pr-2"></i> Exportar Servidores para Excel
+              </button>
+            </form>
+          </div>
+          {% endif %}
 
           <!-- Exportar storages -->
           {% if cl.opts.model_name == 'storage' %}
